@@ -1,0 +1,2 @@
+# Attributes
+$a = Reg_FolderDescriptions() _DebugArrayDisplay($a, "Reg_FolderDescriptions()") Func Reg_FolderDescriptions()     Local $t = TimerInit(), $sHKLM = "HKLM"     If StringInStr(@OSArch, "64") Then $sHKLM = "HKLM64"     Local $sRootKeyName = $sHKLM &amp; "\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\FolderDescriptions"     Local $sSubKey = "", $x = 0, $aEnumKey[10000][10]     $aEnumKey[0][1] = "Name"     $aEnumKey[0][2] = "Category"     $aEnumKey[0][3] = "Attributes"     $aEnumKey[0][4] = "Roamable"     $aEnumKey[0][5] = "ParsingName"
